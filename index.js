@@ -161,14 +161,14 @@ if (tipoDeMonstruo == 1) {
 } else if (tipoDeMonstruo == 3) {
     nameM = "Praña"
     console.log(`"Que el juicio divino comience. Te mostraré la verdad, mortal ignorante e iluso" - dijo el carnero alzando la balanza `)
-    for (i = 0; i = 2; i++) {
+    for (i = 0; i <= 1; i++) {
         const rta1 = prompt("¿Cuántas veces se puede restar 1 a la cifra 1111?")
         rta7 = rta1
         if (rta7 != ("una sola vez")) {
             console.log(`Incorrecto. Otra vez.`)
             console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe1 - monstruo3Danio}`)
             vidaRestanteHeroe1 = vidaRestanteHeroe1 - monstruo3Danio
-            if (vidaRestanteHeroe1 == 0) {
+            if (i === 1 || vidaRestanteHeroe1 == 0) {
                 console.log(`El viajero ha caído derrotado. ¡${nameM} se ha devorado al viajero!`)
                 break;
             }
@@ -180,14 +180,14 @@ if (tipoDeMonstruo == 1) {
             break;
         }
     }
-    for (i = 0; i = 2; i++) {
+    for (i = 0; i <= 1; i++) {
         const rta1 = prompt("¿Cuántos meses tienen 28 días?")
         rta7 = rta1
         if (rta7 != ("todos los meses")) {
             console.log(`Incorrecto. Otra vez.`)
             console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe1 - monstruo3Danio}`)
             vidaRestanteHeroe1 = vidaRestanteHeroe1 - monstruo3Danio
-            if (vidaRestanteHeroe1 == 0) {
+            if (i === 1 || vidaRestanteHeroe1 == 0) {
                 console.log(`El viajero ha caído derrotado. ¡${nameM} se ha devorado al viajero!`)
                 break;
             }
@@ -199,14 +199,14 @@ if (tipoDeMonstruo == 1) {
             break;
         }
     }
-    for (i = 0; i = 2; i++) {
+    for (i = 0; i <= 1; i++) {
         const rta1 = prompt("Es tuyo pero todos lo usan más.")
         rta7 = rta1
         if (rta7 != ("tu nombre")) {
             console.log(`Incorrecto. Otra vez.`)
             console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe1 - monstruo3Danio}`)
             vidaRestanteHeroe1 = vidaRestanteHeroe1 - monstruo3Danio
-            if (vidaRestanteHeroe1 == 0) {
+            if (i === 1 || vidaRestanteHeroe1 == 0) {
                 console.log(`El viajero ha caído derrotado. ¡${nameM} se ha devorado al viajero!`)
                 break;
             }
@@ -218,14 +218,14 @@ if (tipoDeMonstruo == 1) {
             break;
         }
     }
-    for (i = 0; i = 2; i++) {
+    for (i = 0; i <= 1; i++) {
         const rta1 = prompt("Si lo tengo, no lo comparto. Si lo comparto, no lo tengo. ¿Qué es?")
         rta7 = rta1
         if (rta7 != ("un secreto")) {
             console.log(`Incorrecto. Otra vez.`)
             console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe1 - monstruo3Danio}`)
             vidaRestanteHeroe1 = vidaRestanteHeroe1 - monstruo3Danio
-            if (vidaRestanteHeroe1 == 0) {
+            if (i === 1 || vidaRestanteHeroe1 == 0) {
                 console.log(`El viajero ha caído derrotado. ¡${nameM} se ha devorado al viajero!`)
                 break;
             }
@@ -237,14 +237,14 @@ if (tipoDeMonstruo == 1) {
             break;
         }
     }
-    for (i = 0; i = 2; i++) {
+    for (i = 0; i <= 1; i++) {
         const rta1 = prompt("¿cuánto tiempo necesitan 100 máquinas para elaborar 100 artículos?")
         rta7 = rta1
         if (rta7 != ("5 minutos")) {
             console.log(`Incorrecto. Otra vez.`)
             console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe1 - monstruo3Danio}`)
             vidaRestanteHeroe1 = vidaRestanteHeroe1 - monstruo3Danio
-            if (vidaRestanteHeroe1 == 0) {
+            if (i === 1 || vidaRestanteHeroe1 == 0) {
                 console.log(`El viajero ha caído derrotado. ¡${nameM} se ha devorado al viajero!`)
                 break;
             }
