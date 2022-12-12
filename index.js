@@ -279,3 +279,12 @@ if (tipoDeMonstruo == 1) {
 } else {
     console.log(`Ingrese un número válido `)
 }
+
+// un juego de praña: ordenar 10 palabras por la cantidad de letras que tienen/ orden alfabético en 10 - 20 segundos. juego lógico dificil (para aplicar Sort)
+// minuto 01:30:00 de la clase de funciones superiores
+
+// otro juego para Praña con el método Math.min o Math.max = Un juego en el que comparas dos operaciones matemáticas.
+// Ambas te dan resultados distintos y tenes que ver cual te da el resultado menor o mayor en menos de 30 seg
+
+// juegos de Praña o Viri: Math.random() te tira un numero random con comas entre tal o tal. sin parametros es entre 0 y 1. 
+// el usuario debe decir un número más chico o pequeño del número que tira ese método. es para calentar y que el usuario ponga atención
