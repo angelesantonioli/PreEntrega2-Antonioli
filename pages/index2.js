@@ -27,6 +27,7 @@ let vidaRestanteHeroe2 = traveler.heroeVidaa
 let vidaRestanteMonstruo3 = monstruo3.monstruo3Vida
 let vidaRestanteHeroe3 = traveler.heroeVidaa
 
+let numbers = [220, 14, 34, 746473, 27, 393, 211, 9, 36, 72]
 
 function bienvenida() {
     console.log(`Bienvenido/a a IntrAAbyssuS, viajero. Esta es una aventura de acertijos y preguntas. Así que ¡Hora de pelear!`)
@@ -34,27 +35,50 @@ function bienvenida() {
 
 bienvenida()
 
-function acertijo(array) {
+function acertijoM1(array) {
     for (let i = 0; i < array.length; i++) {
-    console.log(`${array[i].pregunta}`)
-    const rta1 = prompt(`Tu respuesta es:`)
-    if (rta1 === `${array[i].rta}`) {
-        console.log(`¡Correcto!`)
-        console.log(`El viajero ha atacado a ${nameM}. Vida actual de ${nameM}: ${vidaRestanteMonstruo1 - traveler.heroeDanio1}`)
-        vidaRestanteMonstruo1 = vidaRestanteMonstruo1 - traveler.heroeDanio1
-    } else {
-        console.log(`¡Incorrecto!`)
-        console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe1 - monstruo1.monstruo1Danio}`)
-        vidaRestanteHeroe1 = vidaRestanteHeroe1 - monstruo1.monstruo1Danio
-    }
-    if (vidaRestanteHeroe1 == 0) {
-        console.log(`El viajero ha caído derrotado. ¡${nameM} se ha devorado al viajero!`)
-        break;
-    } else if (vidaRestanteMonstruo1 == 0) {
-        console.log(`${nameM} ha caído derrotado. ¡El viajero es el ganador!`)
-        break;
+        console.log(`${array[i].pregunta}`)
+        const rta1 = prompt(`Tu respuesta es:`)
+        if (rta1 === `${array[i].rta}`) {
+            console.log(`¡Correcto!`)
+            console.log(`El viajero ha atacado a ${nameM}. Vida actual de ${nameM}: ${vidaRestanteMonstruo1 - traveler.heroeDanio1}`)
+            vidaRestanteMonstruo1 = vidaRestanteMonstruo1 - traveler.heroeDanio1
+        } else {
+            console.log(`¡Incorrecto!`)
+            console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe1 - monstruo1.monstruo1Danio}`)
+            vidaRestanteHeroe1 = vidaRestanteHeroe1 - monstruo1.monstruo1Danio
+        }
+        if (vidaRestanteHeroe1 == 0) {
+            console.log(`El viajero ha caído derrotado. ¡${nameM} se ha devorado al viajero!`)
+            break;
+        } else if (vidaRestanteMonstruo1 == 0) {
+            console.log(`${nameM} ha caído derrotado. ¡El viajero es el ganador!`)
+            break;
+        }
     }
 }
+
+function acertijoM3(array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(`${array[i].pregunta}`)
+        const rta1 = prompt(`Tu respuesta es:`)
+        if (rta1 === `${array[i].rta}`) {
+            console.log(`¡Correcto!`)
+            console.log(`El viajero ha atacado a ${nameM}. Vida actual de ${nameM}: ${vidaRestanteMonstruo3 - traveler.heroeDanio2}`)
+            vidaRestanteMonstruo3 = vidaRestanteMonstruo3 - traveler.heroeDanio2
+        } else {
+            console.log(`¡Incorrecto!`)
+            console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe3 - monstruo3.monstruo3Danio}`)
+            vidaRestanteHeroe3 = vidaRestanteHeroe3 - monstruo3.monstruo3Danio
+        }
+        if (vidaRestanteHeroe3 == 0) {
+            console.log(`El viajero ha caído derrotado. ¡${nameM} se ha devorado al viajero!`)
+            break;
+        } else if (vidaRestanteMonstruo3 == 0) {
+            console.log(`${nameM} ha caído derrotado. ¡El viajero es el ganador!`)
+            break;
+        }
+    }
 }
 
 function mate(array) {
@@ -62,19 +86,19 @@ function mate(array) {
     const rta1 = prompt(`${array[2].pregunta}`)
     if (rta1 === `${array[2].rta}`) {
         console.log(`¡Correcto!`)
-        console.log(`El viajero ha atacado a ${nameM}. Vida actual de ${nameM}: ${vidaRestanteMonstruo1 - traveler.heroeDanio1}`)
-        vidaRestanteMonstruo1 = vidaRestanteMonstruo1 - traveler.heroeDanio1
+        console.log(`El viajero ha atacado a ${nameM}. Vida actual de ${nameM}: ${vidaRestanteMonstruo3 - traveler.heroeDanio2}`)
+        vidaRestanteMonstruo3 = vidaRestanteMonstruo3 - traveler.heroeDanio2
     } else {
         console.log(`¡Incorrecto!`)
         console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe1 - monstruo1.monstruo1Danio}`)
-        vidaRestanteHeroe1 = vidaRestanteHeroe1 - monstruo1.monstruo1Danio
+        vidaRestanteHeroe3 = vidaRestanteHeroe3 - monstruo3.monstruo3Danio
     }
 }
 
 function init3() {
     n = Math.random()
     const rta = prompt(`Dime un número más pequeño que ${n} `)
-    if (rta < n ) {
+    if (rta < n) {
         console.log(`¡Correcto!`)
         console.log(`${nameM} te mira con diversión. "Veo que estás atento. Eso es bueno" luego ve tu expresión confundida y ríe "Claro que ese no era un acertijo, humano ignorante. Solamente te necesito atento para derrotarte de manera justa. Ahora sí." Siguiente:`)
     } else {
@@ -84,9 +108,9 @@ function init3() {
 }
 
 function ordenarAlf(array) {
-    const ascendente = [...array[0].pregunta].sort((a,b) => {
+    const ascendente = [...array[0].pregunta].sort((a, b) => {
         if (a < b) {
-            return -1 
+            return -1
         } else if (a > b) {
             return 1
         } else {
@@ -97,8 +121,8 @@ function ordenarAlf(array) {
     const rta = prompt(`sueños, esperanza, justo, recuerdo, florece, vacío, silencio, mañana, engaño, amanecer`)
     const rtaCorrecta = ascendente.reduce((acc, elemento) => {
         return acc + `${elemento} `
-    },"")
-    if ( rta == rtaCorrecta) {
+    }, "")
+    if (rta == rtaCorrecta) {
         console.log(`¡Correcto!`)
         console.log(`El viajero ha atacado a ${nameM}. Vida actual de ${nameM}: ${vidaRestanteMonstruo3 - traveler.heroeDanio2}`)
         vidaRestanteMonstruo3 = vidaRestanteMonstruo3 - traveler.heroeDanio2
@@ -115,8 +139,8 @@ function compare() {
     console.log(`a) (X/2) + 4 + (X-3) `)
     console.log(`b) 2*(X-5) + X`)
     const rta = prompt(`¿Cuál de los resultados es mayor? ¿a o b?`)
-    a = (x/2) + 4 + (x-3)
-    b = 2*(x-5) + x
+    a = (x / 2) + 4 + (x - 3)
+    b = 2 * (x - 5) + x
     if (a < b) {
         if (rta == `b`) {
             console.log(`¡Correcto!`)
@@ -124,8 +148,8 @@ function compare() {
             vidaRestanteMonstruo3 = vidaRestanteMonstruo3 - traveler.heroeDanio2
         } else {
             console.log(`¡Incorrecto!`)
-        console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe3 - monstruo3.monstruo3Danio}`)
-        vidaRestanteHeroe3 = vidaRestanteHeroe3 - monstruo3.monstruo3Danio
+            console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe3 - monstruo3.monstruo3Danio}`)
+            vidaRestanteHeroe3 = vidaRestanteHeroe3 - monstruo3.monstruo3Danio
         }
     } else {
         if (rta == `a`) {
@@ -134,8 +158,8 @@ function compare() {
             vidaRestanteMonstruo3 = vidaRestanteMonstruo3 - traveler.heroeDanio2
         } else {
             console.log(`¡Incorrecto!`)
-        console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe3 - monstruo3.monstruo3Danio}`)
-        vidaRestanteHeroe3 = vidaRestanteHeroe3 - monstruo3.monstruo3Danio
+            console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe3 - monstruo3.monstruo3Danio}`)
+            vidaRestanteHeroe3 = vidaRestanteHeroe3 - monstruo3.monstruo3Danio
         }
     }
 }
@@ -146,7 +170,7 @@ const tipoDeMonstruo = prompt("Elija un monstruo a enfrentar ingresando 1, 2 o 3
 if (tipoDeMonstruo == 1) {
     nameM = "Sati"
     console.log(`"Jeje, no vas a derrotarme tan fácilmente, humano. Ahora responde mis acertijos." - Exclama el gato `)
-        acertijo(acertijos)
+    acertijoM1(acertijos)
 }
 
 else if (tipoDeMonstruo == 2) {
@@ -160,17 +184,31 @@ else if (tipoDeMonstruo == 3) {
     init3()
     ordenarAlf(mat)
     compare()
-    if ((vidaRestanteHeroe3 - 2) ==  0) {
-        console.log(`${nameM} te mira de manera fanfarrona. "Veo que estás cerca de perder así que te daré una ayuda: Te preguntaré un acertijo que ya te preguntaron mis anteriores compañeros así me haces daño `)
-        const rta = prompt("Elije un número del 3 al 7 y te diré un acertijo viejo")
-        Number(rta)
-        const pgt = acertijos.find((elemento, i) => {
-            return i === rta
+    if ((vidaRestanteHeroe3 - 2) == 0) {
+        console.log(`${nameM} te mira de manera fanfarrona. "Veo que estás cerca de perder así que te daré una ayuda: Te preguntaré un acertijo de divisiones. ¿No debería ser dificil, verdad? `)
+        const x = prompt(`Elige un número del 1 al 10 `)
+        console.log(`En esta lista de números, ¿Cuál es el 1er número divisible por ${x}? `)
+        const pregunta = numbers.reduce((acc, elemento) => {
+            return acc + `${elemento} `
+        }, "")
+        const rta = prompt(`${pregunta} `)
+        const divisible = numbers.find((elemento) => {
+            return elemento % x === 0
         })
-        console.log(pgt)
-    } else {
-        mate(mat)
+        console.log(divisible)
+        if (divisible == rta) {
+            console.log(`¡Correcto!`)
+            console.log(`El viajero ha atacado a ${nameM}. Vida actual de ${nameM}: ${vidaRestanteMonstruo3 - traveler.heroeDanio2}`)
+            vidaRestanteMonstruo3 = vidaRestanteMonstruo3 - traveler.heroeDanio2
+        } else {
+            console.log(`¡Incorrecto!`)
+            console.log(`${nameM} ha atacado al viajero. Vida actual de viajero: ${vidaRestanteHeroe3 - monstruo3.monstruo3Danio}`)
+            vidaRestanteHeroe3 = vidaRestanteHeroe3 - monstruo3.monstruo3Danio
+        }
     }
+    mate(mat)
+    acertijoM3(acertijos)
+
 } else {
     console.log(`Ingrese un número válido `)
 }
