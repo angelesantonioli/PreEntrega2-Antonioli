@@ -1,5 +1,5 @@
 body {
-    background-color: grey;
+    background: black;
 }
 
 .cero-chapter {
@@ -7,16 +7,29 @@ body {
     align-items: center;
     flex-direction: column;
 }
+
 h1 {
     margin-top: 5px;
     font-family: 'Cinzel', serif;
     color: white;
-    font-size: 5rem;
+    font-size: 5em;
+    margin-top: 30px;
+    margin-bottom: 120px;
 }
 
 .portada {
     display: flex;
     justify-content: center;
+}
+
+.fondo {
+    width: 100%;
+    height: 70em;
+}
+
+.fondo img {
+    width: 110em;
+    height: 100%;
 }
 
 .maquina-efect {
@@ -187,4 +200,85 @@ h2 {
     100% {
         transform: translatey(0px);
     }
+}
+
+.music-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#musicIcon {
+    width: 80px;
+    cursor: pointer;
+}
+
+#satiIcon {
+    margin-left: 55px;
+}
+
+#cero {
+    width: 100%;
+    height: 70em;
+}
+
+#cero img {
+    width: 50em;
+    height: 80%;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.bienvenida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid white;
+}
+
+.bienvenida form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bienvenida form label input {
+    width: 20%;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-family: 'Cinzel', serif;
+    color: grey;
+    border-radius: 10px;
+    border: none;
+    margin: 5px;
+    text-align: center;
+}
+
+#boton {
+    color: black;
+    background: grey;
+    transition: all 0.5s ease;
+}
+
+#boton:hover {
+    cursor: pointer;
+    background: rgb(207, 213, 213);
+    color: #1e1e1e;
+}
+
+#correct {
+    text-align: center;
+    color: rgb(232, 64, 176);
+    display: none;
+}
+
+#nament {
+    display: none;
+}
+
+.mascot {
+    margin-top: 50px;
 }
